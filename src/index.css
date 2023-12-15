@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply bg-blue-950
+        background-color: rgb(17,24,39);
     }
 }

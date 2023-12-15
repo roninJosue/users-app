@@ -1,11 +1,15 @@
-import Users from "./components/Users.jsx";
+import { RecoilRoot } from 'recoil';
+
+import Users from "./components/Users/Users.jsx";
 
 function App() {
   return (
-    <main className="container mx-auto">
-      <h1 className="text-center text-3xl font-bold">Users</h1>
-      <Users />
-    </main>
+    <RecoilRoot>
+      <main className="container mx-auto py-5">
+        <h1 className="text-center text-3xl font-bold text-white mb-8">User List</h1>
+        <Users />
+      </main>
+    </RecoilRoot>
   )
 }
 
