@@ -26,24 +26,17 @@ const Users = () => {
     },
     {
       title: '',
-      render: ({row}) => <Delete onDelete={() => onDelete(row.id)} />
+      render: ({row}) => <Delete onDelete={() => onDelete(row.id)}/>
     }
   ];
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="inline-block py-2 sm:px-6 lg:px-8">
-          <div className="overflow-hidden">
-            <div className="rounded shadow-lg bg-white py-5 px-4">
-              <Table
-                columns={columns}
-                data={users}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
+    <div className="flex justify-center items-start py-5 px-5">
+      <Table
+        columns={columns}
+        data={users}
+      />
     </div>
   )
 }
