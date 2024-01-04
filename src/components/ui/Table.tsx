@@ -1,13 +1,13 @@
-import {Columns} from "../../types/users";
+import {Column} from "../../types/table";
 
 type Data<T> = T[];
 
 interface TableProps<T> {
-  columns: Columns[];
+  columns: Column[];
   data: Data<T>;
 }
 
-function Table<T>({columns, data}: Readonly<TableProps<T>>) {
+function Table<T extends { id: string; }>({columns, data}: Readonly<TableProps<T>>) {
   return (
     <div className='overflow-x-auto bg-white px-4 py-4 rounded lg:w-9/12 lg:max-h-1/2 max-h-80vh'>
       <table className="text-left text-sm font-light min-w-full">

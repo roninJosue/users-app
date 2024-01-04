@@ -20,9 +20,3 @@ export type User = {
   email: string,
   country: string
 }
-
-export type Columns = {
-  title: string,
-  field?: string,
-  render?: any
-}

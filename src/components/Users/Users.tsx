@@ -2,12 +2,13 @@ import Table from "../ui/Table";
 import {ProfilePicture} from "./ProfilePicture";
 import {Delete} from "./Delete";
 import useUser from "./useUser";
-import {Columns, User} from "../../types/users";
+import {User} from "../../types/users";
+import {Column} from "../../types/table";
 
 const Users = () => {
   const {users, onDelete} = useUser();
 
-  const columns:Columns[] = [
+  const columns: Column[] = [
     {
       title: 'Imagen',
       field: 'image',
