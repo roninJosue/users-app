@@ -1,6 +1,6 @@
 import { RecoilRoot } from 'recoil';
 
-import Users from "./components/Users/Users.jsx";
+import Users from "./components/Users/Users";
 
 function App() {
   return (

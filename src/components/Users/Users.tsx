@@ -1,12 +1,13 @@
-import Table from "../ui/Table.jsx";
-import {ProfilePicture} from "./ProfilePicture.jsx";
-import {Delete} from "./Delete.jsx";
-import useUser from "./useUser.js";
+import Table from "../ui/Table";
+import {ProfilePicture} from "./ProfilePicture";
+import {Delete} from "./Delete";
+import useUser from "./useUser";
+import {Columns, User} from "../../types/users";
 
 const Users = () => {
   const {users, onDelete} = useUser();
 
-  const columns = [
+  const columns:Columns[] = [
     {
       title: 'Imagen',
       field: 'image',
@@ -26,7 +27,7 @@ const Users = () => {
     },
     {
       title: '',
-      render: ({row}) => <Delete onDelete={() => onDelete(row.id)}/>
+      render: ({row}: { row: User }) => <Delete onDelete={() => onDelete(row.id)}/>
     }
   ];
 

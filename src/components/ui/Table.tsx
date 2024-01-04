@@ -1,4 +1,13 @@
-const Table = ({columns, data}) => {
+import {Columns} from "../../types/users";
+
+type Data<T> = T[];
+
+interface TableProps<T> {
+  columns: Columns[];
+  data: Data<T>;
+}
+
+function Table<T>({columns, data}: Readonly<TableProps<T>>) {
   return (
     <div className='overflow-x-auto bg-white px-4 py-4 rounded lg:w-9/12 lg:max-h-1/2 max-h-80vh'>
       <table className="text-left text-sm font-light min-w-full">
@@ -9,7 +18,7 @@ const Table = ({columns, data}) => {
         </thead>
         <tbody>
         {
-          data.map(row => {
+          data.map((row: T) => {
             return (
               <tr className="border-b transition duration-300 ease-in-out hover:bg-neutral-100" key={row.id}>
                 {columns.map(col => {
